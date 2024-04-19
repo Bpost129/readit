@@ -1,0 +1,18 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+
+  <div>
+    <% posts.forEach(post => { %>
+      <div id="post-div">
+        <p><%= post.author.name %></p>
+        <a href="/posts/<%= post._id %>"><%= post.title %></a>
+        <p><%= post.text %></p>
+      </div>
+    <% }) %>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,18 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/posts/new.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+
+  <form id="create-post-form" action="/posts" method="POST">
+    <label for="title-input">Title:</label>
+    <input type="text" name="title" id="title-input">
+    <label for="text-input">Text:</label>
+    <textarea name="text" id="text-input" cols="40" rows="6"></textarea>
+
+    <button type="submit">Post It</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

@@ -21,12 +21,18 @@ body {
 }
 
 nav {
-  background-color: #f6f6f6;
-  color: #1a1a1a;
+  background-color: #1a1a1a;
+  color: #f6f6f6;
   display: flex;
   align-items: center;
   padding: 10px;
   min-height: 60px;
+}
+
+nav > a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
 }
 
 main {
