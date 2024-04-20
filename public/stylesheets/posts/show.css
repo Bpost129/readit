@@ -98,13 +98,13 @@
 }
 
 #dislike {
-  background-color: red;
+  background-color: rgba(255, 0, 0, .5);
   padding: 1px 5px;
   border-radius: 50%;
 }
 
 #like {
-  background-color: limegreen;
+  background-color: rgba(50, 205, 50, .5);
   padding: 1px 5px;
   border-radius: 50%;
 }
