@@ -17,11 +17,16 @@
         </div>
         <div class="social-div">
           <div class="social-btn">
-            <div><i class="fas fa-solid fa-angle-up" style="color: white;"></i></div>
-            Likes
-            <div><i class="fas fa-solid fa-angle-down" style="color: white;"></i></div>
+            <div id="like"><i class="fas fa-solid fa-angle-up" style="color: white;"></i></div>
+            <div id="likes"><%= post.likes %></div>
+            <div id="dislike"><i class="fas fa-solid fa-angle-down" style="color: white;"></i></div>
           </div>
-          <div class="social-btn">Comments</div>
+          <a href="/posts/<%= post._id %>">
+            <div class="social-btn">
+              <div id="num-comments"><%= post.comments.length %></div>
+              <div><i class="fas fa-solid fa-comment" style="color: white;"></i></div>
+            </div>
+          </a>
         </div>
       </div>
     <% }) %>
