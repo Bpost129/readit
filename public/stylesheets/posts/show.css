@@ -1,0 +1,27 @@
+.post-div {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  min-height: 200px;
+  border: 2px solid orange;
+  margin-bottom: 12px;
+}
+
+.author-div {
+  display: flex;
+  align-items: center;
+}
+
+.content-div {
+  margin-left: 8px;
+}
+
+.content-div > a {
+  font-size: 24px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  
+}
