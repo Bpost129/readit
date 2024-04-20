@@ -48,10 +48,37 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    res.render('posts/edit', {
+      post,
+      title: 'Edit Post'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts')
+  })
+}
+
+function update(req, res) {
+  Post.findByIdAndUpdate(req.params.postId, req.body, {new: true})
+  .then(post => {
+    res.redirect(`/posts/${post._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts')
+  })
+}
+
 export {
   index,
   newPost as new,
   create,
   show,
+  edit,
+  update,
 
 }

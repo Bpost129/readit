@@ -10,7 +10,11 @@ router.get('/new', isLoggedIn, postsCtrl.new)
 
 router.get('/:postId', postsCtrl.show)
 
+router.get('/:postId/edit', isLoggedIn, postsCtrl.edit)
+
 router.post('/', isLoggedIn, postsCtrl.create)
+
+router.put('/:postId', isLoggedIn, postsCtrl.update)
 
 export {
   router

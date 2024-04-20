@@ -1,0 +1,20 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/posts/edit.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+
+  <form id="edit-post-form" action="/posts/<%= post._id %>?_method=PUT" method="POST">
+    <label for="title-input">Title:</label>
+    <input type="text" name="title" id="title-input" value="<%= post.title %>">
+    <label for="text-input">Text:</label>
+    <textarea name="text" id="text-input" cols="40" rows="6">
+      <%= post.text %>
+    </textarea>
+
+    <button type="submit">Post It</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>
