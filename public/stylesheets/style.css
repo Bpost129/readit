@@ -29,7 +29,7 @@ nav {
   align-items: center;
   padding: 10px;
   min-height: 60px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(85, 85, 85);
 }
 
 nav > a {
@@ -66,7 +66,7 @@ button {
   border-radius: 25px;
   color:white;
   background-color: rgb(53, 53, 53);
-  border: 1px solid salmon;
+  border: 1px solid #fa9d72;
 }
 
 button:hover {
