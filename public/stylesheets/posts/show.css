@@ -3,9 +3,14 @@
   flex-direction: column;
   width: 600px;
   min-height: 179px;
-  border-bottom: 1px solid rgb(85, 85, 85);
+  /* border-bottom: 1px solid rgb(85, 85, 85); */
   padding-bottom: 8px;
   /* margin-bottom: 12px; */
+}
+
+.comment-div {
+  /* border-bottom: 1px solid rgb(85, 85, 85); */
+  padding-bottom: 8px;
 }
 
 .author-div {
@@ -102,4 +107,25 @@
   background-color: limegreen;
   padding: 1px 5px;
   border-radius: 50%;
+}
+
+#comment-input {
+  margin: 8px;
+  width: 550px;
+  height: 30px;
+  border-radius: 25px;
+  padding: 0 12px;
+  background: none;
+  border: 1px solid rgb(85, 85, 85);
+  color: white;
+}
+
+#comment-form-button {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(53, 53, 53);
+  text-align: center;
+  border: none;
 }

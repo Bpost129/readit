@@ -14,7 +14,11 @@ router.get('/:postId/edit', isLoggedIn, postsCtrl.edit)
 
 router.post('/', isLoggedIn, postsCtrl.create)
 
+router.post('/:postId/comments', isLoggedIn, postsCtrl.addComment)
+
 router.delete('/:postId', isLoggedIn, postsCtrl.delete)
+
+router.delete('/:postId/comments/:commentId', isLoggedIn, postsCtrl.deleteComment)
 
 router.put('/:postId', isLoggedIn, postsCtrl.update)
 

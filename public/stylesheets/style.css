@@ -28,14 +28,22 @@ nav {
   display: flex;
   align-items: center;
   padding: 10px;
-  min-height: 60px;
+  font-size: 16px;
+  height: 55px;
+  /* min-height: 60px; */
   border-bottom: 1px solid rgb(85, 85, 85);
 }
 
 nav > a {
-  margin: 0 12px;
+  margin: 0 6px;
+  padding: 8px 8px;
   color: white;
   text-decoration: none;
+  border-radius: 25px;
+}
+
+nav > a:hover {
+  background-color: rgb(70, 70, 70);
 }
 
 main {
