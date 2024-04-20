@@ -58,14 +58,14 @@ main {
   margin-top: 20px;
 }
 
-/* button {
+button {
   height: 30px;
   width: 100px;
   border-radius: 25px;
   color:white;
   background-color: rgb(53, 53, 53);
   border: 1px solid salmon;
-} */
+}
 
 button:hover {
   background-color: rgb(70, 70, 70);

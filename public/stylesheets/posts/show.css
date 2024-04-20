@@ -4,6 +4,7 @@
   width: 500px;
   min-height: 200px;
   border-bottom: 1px solid grey;
+  padding-bottom: 8px;
   /* margin-bottom: 12px; */
 }
 
@@ -44,9 +45,9 @@
   margin-left: 5px;
 }
 
-/* .content-div {
-  margin-left: 8px;
-} */
+.content-div {
+  margin-top: 5px;
+}
 
 
 #title {
