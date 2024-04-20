@@ -1,11 +1,17 @@
 .post-div {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 600px;
   border-bottom: 1px solid grey;
   padding: 5px 0;
   /* border-bottom: 1px solid grey; */
   /* margin-bottom: 12px; */
+}
+.avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin: 8px 8px 0 0;
 }
 
 .author-div {
@@ -14,9 +20,9 @@
   margin-bottom: 5px;
 }
 
-.content-div {
+/* .content-div {
   margin-left: 8px;
-}
+} */
 
 .content-div > a {
   font-size: 22px;
@@ -29,7 +35,7 @@
 .social-div {
   display: flex;
   align-items: center;
-  margin: 0 0 8px 8px;
+  margin-bottom: 8px;
 }
 
 .social-btn {
