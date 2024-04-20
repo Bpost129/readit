@@ -11,6 +11,7 @@
 .author-div {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .content-div {
@@ -18,11 +19,14 @@
 }
 
 .content-div > a {
-  font-size: 22px;
+  font-size: 20px;
+}
+
+.content-div > a:hover {
+  font-weight: 450;
 }
 
 a {
   color: white;
   text-decoration: none;
-  
 }

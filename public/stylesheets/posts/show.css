@@ -3,7 +3,6 @@
   flex-direction: column;
   width: 500px;
   min-height: 200px;
-  border-top: 1px solid grey;
   border-bottom: 1px solid grey;
   /* margin-bottom: 12px; */
 }
@@ -11,18 +10,34 @@
 .author-div {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
 }
 
-.content-div {
+.author-section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-arrow-left {
+  margin-top: 8px;
+}
+
+.author-section-2 {
+  display: flex;
+  align-items: center;
+}
+
+.author-section-2 > :nth-child(2){
+  margin-left: 5px;
+}
+
+/* .content-div {
   margin-left: 8px;
-}
+} */
 
-.content-div > a {
+#title {
   font-size: 24px;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  
-}

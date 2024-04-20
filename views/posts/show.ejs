@@ -3,18 +3,32 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-
-  <div>
-    <div class="post-div">
-      <div class="author-div">
+  <div class="post-div">
+    <div class="author-div">
+      <div class="author-section-1"> 
+        <a href="/posts">
+          <div>
+            <i class="fas fa-solid fa-arrow-left" style="color: white;"></i>
+          </div>
+        </a>
         <img class="avatar" src="<%= post.author.avatar %>" alt="avatar">
-        <p><%= post.author.name %></p>
+        <p class="author" ><%= post.author.name %></p>
       </div>
-      <div class="content-div">
-        <a href="/posts/<%= post._id %>"><%= post.title %></a>
-        <p><%= post.text %></p>
-      </div>
+      <% if (post.author.equals(user?.profile._id)) { %>
+        <div class="author-section-2">
+          <a href="/posts/<%= post._id %>/edit">
+            <button class="post-show-btn">Edit Post</button>
+          </a>
+          <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+            <button class="post-show-btn" type="submit">Delete Post</button>
+          </form>
+        </div>
+      <% } %>
+      
+    </div>
+    <div class="content-div">
+      <p id="title"><%= post.title %></p>
+      <p><%= post.text %></p>
     </div>
   </div>
 </main>
