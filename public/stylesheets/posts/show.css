@@ -129,3 +129,6 @@
   text-align: center;
   border: none;
 }
+#comment-form-button:hover {
+  background-color: rgb(70, 70, 70);
+}
