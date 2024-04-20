@@ -66,3 +66,7 @@ button {
   background-color: rgb(53, 53, 53);
   border: 1px solid salmon;
 }
+
+button:hover {
+  background-color: rgb(70, 70, 70);
+}
