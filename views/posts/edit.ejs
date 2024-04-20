@@ -9,9 +9,7 @@
     <label for="title-input">Title:</label>
     <input type="text" name="title" id="title-input" value="<%= post.title %>">
     <label for="text-input">Text:</label>
-    <textarea name="text" id="text-input" cols="40" rows="6">
-      <%= post.text %>
-    </textarea>
+    <textarea name="text" id="text-input" cols="40" rows="6"><%= post.text %></textarea>
 
     <button type="submit">Post It</button>
   </form>
