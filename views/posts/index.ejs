@@ -1,15 +1,22 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/posts/index.css">
 <%- include('../partials/nav') %>
 
 <main>
   <h1><%= title %></h1>
 
   <div>
+    <% posts.reverse() %>
     <% posts.forEach(post => { %>
-      <div id="post-div">
-        <p><%= post.author.name %></p>
-        <a href="/posts/<%= post._id %>"><%= post.title %></a>
-        <p><%= post.text %></p>
+      <div class="post-div">
+        <div class="author-div">
+          <img class="avatar" src="<%= post.author.avatar %>" alt="avatar">
+          <p><%= post.author.name %></p>
+        </div>
+        <div class="content-div">
+          <a href="/posts/<%= post._id %>"><%= post.title %></a>
+          <p><%= post.text %></p>
+        </div>
       </div>
     <% }) %>
   </div>

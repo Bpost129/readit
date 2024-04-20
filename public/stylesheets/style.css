@@ -45,3 +45,10 @@ main {
 .right {
   margin-left: auto;
 }
+
+.avatar {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  margin: 5px;
+}

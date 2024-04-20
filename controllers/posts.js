@@ -33,9 +33,24 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    res.render('posts/show', {
+      post,
+      title: 'Post Details'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts/new')
+  })
+}
+
 export {
   index,
   newPost as new,
   create,
+  show,
 
 }

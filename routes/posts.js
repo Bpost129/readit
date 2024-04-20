@@ -8,6 +8,8 @@ router.get('/', postsCtrl.index)
 
 router.get('/new', isLoggedIn, postsCtrl.new)
 
+router.get('/:postId', postsCtrl.show)
+
 router.post('/', isLoggedIn, postsCtrl.create)
 
 export {
