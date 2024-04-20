@@ -73,6 +73,17 @@ function update(req, res) {
   })
 }
 
+function deletePost(req, res) {
+  Post.findByIdAndDelete(req.params.postId)
+  .then(post => {
+    res.redirect('/posts')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts')
+  })
+}
+
 export {
   index,
   newPost as new,
@@ -80,5 +91,6 @@ export {
   show,
   edit,
   update,
+  deletePost as delete,
 
 }

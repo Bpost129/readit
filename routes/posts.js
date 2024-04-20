@@ -14,6 +14,8 @@ router.get('/:postId/edit', isLoggedIn, postsCtrl.edit)
 
 router.post('/', isLoggedIn, postsCtrl.create)
 
+router.delete('/:postId', isLoggedIn, postsCtrl.delete)
+
 router.put('/:postId', isLoggedIn, postsCtrl.update)
 
 export {
