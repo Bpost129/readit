@@ -73,8 +73,9 @@
 }
 
 .social-btn {
-  margin-top: 20px;
-  padding-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 8px;
   height: 30px;
   width: 100px;
@@ -82,5 +83,12 @@
   color:white;
   background-color: rgb(53, 53, 53);
   border: 1px solid salmon;
-  text-align: center;
+}
+
+.social-btn > :nth-child(1) {
+  margin: 0 8px;
+}
+
+.social-btn > :nth-child(2) {
+  margin: 0 8px;
 }
