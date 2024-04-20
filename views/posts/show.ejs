@@ -17,10 +17,14 @@
       <% if (post.author.equals(user?.profile._id)) { %>
         <div class="author-section-2">
           <a href="/posts/<%= post._id %>/edit">
-            <button class="post-show-btn">Edit Post</button>
+            <button class="post-show-btn"><i class="fas fa-solid fa-pen" style="color:white;"></i></button>
+            <!-- <div>
+              <i class="fas fa-regular fa-pen-to-square" style="color:white;"></i>
+            </div> -->
+            
           </a>
           <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-            <button class="post-show-btn" type="submit">Delete Post</button>
+            <button class="post-show-btn" type="submit"><i class="fas fa-solid fa-trash"></i></button>
           </form>
         </div>
       <% } %>

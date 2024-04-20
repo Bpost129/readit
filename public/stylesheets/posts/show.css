@@ -55,6 +55,16 @@
   margin: 0;
 }
 
+.post-show-btn {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(53, 53, 53);
+  text-align: center;
+  border: none;
+}
+
 .social-div {
   display: flex;
   align-items: center;
