@@ -63,15 +63,21 @@
 }
 
 #dislike {
-  background-color: rgba(255, 0, 0, .5);
   padding: 1px 5px;
   border-radius: 50%;
 }
 
 #like {
-  background-color: rgba(50, 205, 50, .5);
   padding: 1px 5px;
   border-radius: 50%;
+}
+
+#dislike:hover {
+  background-color: rgba(255, 0, 0, .7);
+}
+
+#like:hover {
+  background-color: rgba(50, 205, 50, .7);
 }
 
 a {

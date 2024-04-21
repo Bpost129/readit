@@ -118,15 +118,26 @@
 }
 
 #dislike {
-  background-color: rgba(255, 0, 0, .5);
   padding: 1px 5px;
   border-radius: 50%;
 }
 
 #like {
-  background-color: rgba(50, 205, 50, .5);
   padding: 1px 5px;
   border-radius: 50%;
+}
+
+#dislike:hover {
+  background-color: rgba(255, 0, 0, .7);
+}
+
+#like:hover {
+  background-color: rgba(50, 205, 50, .7);
+}
+
+#comment-form {
+  display: flex;
+  align-items: center;
 }
 
 #comment-input {
@@ -134,10 +145,15 @@
   width: 550px;
   height: 30px;
   border-radius: 25px;
-  padding: 0 12px;
+  padding: 6px 12px;
   background: none;
   border: 1px solid rgb(85, 85, 85);
   color: white;
+}
+
+#comment-input:focus {
+  border-radius: 12px;
+  height: 100px
 }
 
 #comment-form-button {

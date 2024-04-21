@@ -45,7 +45,7 @@
   <div class="comments-div">
     <div class="comment-submit">
       <form id="comment-form" action="/posts/<%= post._id %>/comments" method="POST">
-        <input type="text" name="text" id="comment-input" placeholder="Add a comment">
+        <textarea id="comment-input" name="text" id="" cols="40" rows="1" placeholder="Add a comment"></textarea>
         <button id="comment-form-button" type="submit"><i class=" fas fa-solid fa-paper-plane" style="color: white;"></i></button>
       </form>
     </div>
