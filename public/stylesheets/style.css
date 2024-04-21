@@ -49,6 +49,7 @@ nav > :nth-child(2) {
 
 nav > div > a {
   margin: 0 6px;
+  height: 30px;
   padding: 8px 8px;
   color: white;
   text-decoration: none;
@@ -81,6 +82,8 @@ main {
 .create-post {
   /* display: flex;
   flex-wrap: nowrap; */
+  height: 30px;
+  padding: 6px 8px;
   margin-left: auto;
 
   /* margin-right: auto; */
