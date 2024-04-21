@@ -9,18 +9,18 @@
 
 ### [Deployed Link](https://readit-bp.fly.dev/)
 
-## Ice-Box
-[x] "Like" functionality
-[ ] Display time passed in relation to each post/comment
-[ ] Add images to posts
-[ ] Sort feature on main page
-[ ] Popularity feature
-[ ] See posts of a specific user
-
 ## Credits
 
 All icons provided by [Font Awesome](https://fontawesome.com/icons)
 
 Google Oauth template provided by [GA](https://github.com/SEI-Remote/men-stack-oauth-template)
+
+## Ice-Box
+- [x] "Like" functionality
+- [ ] Display time passed in relation to each post/comment
+- [ ] Add images to posts
+- [ ] Sort feature on main page
+- [ ] Popularity feature
+- [ ] See posts of a specific user
 
 ### [Trello Board](https://trello.com/b/jpyxGCQH/readit)
