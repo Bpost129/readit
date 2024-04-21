@@ -10,3 +10,25 @@ label {
 button {
   margin: 8px 0;
 }
+
+#title-input {
+  margin: 8px;
+  width: 550px;
+  height: 30px;
+  border-radius: 25px;
+  padding: 0 12px;
+  background: none;
+  border: 1px solid rgb(85, 85, 85);
+  color: white;
+}
+
+#text-input {
+  margin: 8px;
+  width: 550px;
+  /* height: 30px; */
+  border-radius: 12px;
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid rgb(85, 85, 85);
+  color: white;
+}

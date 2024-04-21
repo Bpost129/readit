@@ -11,6 +11,7 @@
 .comment-div {
   /* border-bottom: 1px solid rgb(85, 85, 85); */
   padding-bottom: 8px;
+  width: 600px;
 }
 
 .author-div {
@@ -54,6 +55,11 @@
   margin-top: 5px;
 }
 
+.comment-content-div {
+  margin-top: 5px;
+  margin-left: 45px;
+}
+
 
 #title {
   font-size: 24px;
@@ -75,6 +81,12 @@
   display: flex;
   align-items: center;
   /* margin: 0 0 8px 8px; */
+}
+
+.comment-social-div {
+  display: flex;
+  align-items: center;
+  margin-left: 45px;
 }
 
 .social-btn {
