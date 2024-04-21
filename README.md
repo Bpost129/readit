@@ -15,7 +15,7 @@ All icons provided by [Font Awesome](https://fontawesome.com/icons)
 
 Google Oauth template provided by [GA](https://github.com/SEI-Remote/men-stack-oauth-template)
 
-[The Duck](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shipducky.com%2Fproducts%2Fcustom-duck&psig=AOvVaw39gB01HGJ0mz9e76l36bGr&ust=1713759139090000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNCtx8C40oUDFQAAAAAdAAAAABAE)
+[The Duck](https://imgur.com/XTRzwMS)
 
 ## Ice-Box
 - [x] "Like" functionality
