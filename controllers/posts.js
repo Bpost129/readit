@@ -23,6 +23,7 @@ function newPost(req, res) {
 
 function create(req, res) {
   req.body.author = req.user.profile._id
+  req.body.createdAt = new Date().toLocaleTimeString()
   Post.create(req.body)
   .then(post => {
     res.redirect('/posts')
@@ -89,6 +90,7 @@ function addComment(req, res) {
   Post.findById(req.params.postId)
   .then(post => {
     req.body.author = req.user.profile._id
+    req.body.createdAt = new Date().toLocaleTimeString()
     post.comments.push(req.body)
     post.save()
     .then(() => {
