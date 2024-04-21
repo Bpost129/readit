@@ -57,6 +57,10 @@ main {
   margin-left: auto;
 }
 
+#logout-btn {
+  font-size: 16px;
+}
+
 .avatar {
   height: 32px;
   width: 32px;
@@ -74,7 +78,8 @@ button {
   border-radius: 25px;
   color:white;
   background-color: rgb(53, 53, 53);
-  border: 1px solid #fa9d72;
+  /* border: 1px solid #fa9d72; */
+  border: none;
 }
 
 button:hover {
