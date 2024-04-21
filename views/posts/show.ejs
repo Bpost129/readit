@@ -13,6 +13,7 @@
         </a>
         <img class="avatar" src="<%= post.author.avatar %>" alt="avatar">
         <p class="author" ><%= post.author.name %></p>
+        <p class="time" ><%= post.createdAt %></p>
       </div>
       <% if (post.author.equals(user?.profile._id)) { %>
         <div class="author-section-2">
@@ -58,6 +59,7 @@
             <div class="author-section-1"> 
               <img class="avatar" src="<%= comment.author.avatar %>" alt="avatar">
               <p class="author" ><%= comment.author.name %></p>
+              <p class="time" ><%= comment.createdAt %></p>
             </div>
             <% if (comment.author.equals(user?.profile._id)) { %>
               <div class="author-section-2">

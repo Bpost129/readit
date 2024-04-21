@@ -15,6 +15,10 @@ const commentSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Profile'
   },
+  createdAt: {
+    type: String,
+    default: new Date().toLocaleTimeString(),
+  },
 })
 
 const postSchema = new Schema({
@@ -33,6 +37,10 @@ const postSchema = new Schema({
   likes: {
     type: Number,
     default: 0,
+  },
+  createdAt: {
+    type: String,
+    default: new Date().toLocaleTimeString(),
   },
   comments: [commentSchema],
 }, {

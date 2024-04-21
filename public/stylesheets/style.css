@@ -104,6 +104,12 @@ main {
   margin-top: 20px;
 }
 
+.time {
+  margin: 8px 0 0 8px;
+  color: rgb(120, 120, 120);
+  font-size: 12px;
+}
+
 button {
   height: 30px;
   width: 100px;

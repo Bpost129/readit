@@ -10,6 +10,7 @@
         <div class="author-div">
           <img class="avatar" src="<%= post.author.avatar %>" alt="avatar">
           <p class="author"><%= post.author.name %></p>
+          <p class="time" ><%= post.createdAt %></p>
         </div>
         <div class="content-div">
           <a href="/posts/<%= post._id %>"><%= post.title %></a>
