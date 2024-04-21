@@ -90,7 +90,6 @@ function addComment(req, res) {
   .then(post => {
     req.body.author = req.user.profile._id
     post.comments.push(req.body)
-    console.log(post.comments)
     post.save()
     .then(() => {
       res.redirect(`/posts/${post._id}`)
