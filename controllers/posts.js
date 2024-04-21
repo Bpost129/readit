@@ -36,6 +36,7 @@ function create(req, res) {
 function show(req, res) {
   Post.findById(req.params.postId)
   .populate('author')
+  .populate('comments.author')
   .then(post => {
     res.render('posts/show', {
       post,
