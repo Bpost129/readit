@@ -6,7 +6,7 @@ function index(req, res) {
   .then(posts => {
     res.render('posts/index', {
       posts,
-      title: 'All Posts'
+      title: 'Readit'
     })
   })
   .catch(err => {
@@ -40,7 +40,7 @@ function show(req, res) {
   .then(post => {
     res.render('posts/show', {
       post,
-      title: 'Post Details'
+      title: post.title,
     })
   })
   .catch(err => {
