@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: #202020;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
   /* font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -23,7 +23,7 @@ body {
 }
 
 nav {
-  background-color: #1a1a1a;
+  background-color: #171717;
   color: #f6f6f6;
   display: flex;
   align-items: center;
