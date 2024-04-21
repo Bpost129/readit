@@ -15,8 +15,6 @@ All icons provided by [Font Awesome](https://fontawesome.com/icons)
 
 Google Oauth template provided by [GA](https://github.com/SEI-Remote/men-stack-oauth-template)
 
-[The Duck](https://imgur.com/XTRzwMS)
-
 ## Ice-Box
 - [x] "Like" functionality
 - [ ] Display time passed in relation to each post/comment
