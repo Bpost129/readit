@@ -12,6 +12,10 @@ router.get('/:postId', postsCtrl.show)
 
 router.get('/:postId/edit', isLoggedIn, postsCtrl.edit)
 
+router.get('/:postId/like', isLoggedIn, postsCtrl.addLike)
+
+router.get('/:postId/dislike', isLoggedIn, postsCtrl.addDislike)
+
 router.get('/:postId/comments/:commentId/edit', isLoggedIn, postsCtrl.editComment)
 
 router.post('/', isLoggedIn, postsCtrl.create)

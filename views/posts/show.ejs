@@ -37,9 +37,10 @@
     </div>
     <div class="social-div">
       <div class="social-btn">
-        <div id="like"><i class="fas fa-solid fa-angle-up" style="color: white;"></i></div>
-        <div id="likes"><%= post.likes.length %></div>
-        <div id="dislike"><i class="fas fa-solid fa-angle-down" style="color: white;"></i></div>
+        <!-- likes -->
+        <a href="/posts/<%= post._id %>/like" id="like"><i class="fas fa-solid fa-angle-up" style="color: white;"></i></a>
+        <div id="likes"><%= post.likes.length - post.dislikes.length %></div>
+        <a href="/posts/<%= post._id %>/dislike" id="dislike"><i class="fas fa-solid fa-angle-down" style="color: white;"></i></a>
       </div>
       <div class="social-btn">
         <div id="num-comments"><%= post.comments.length %></div>
@@ -92,6 +93,7 @@
           </div>
           <div class="comment-social-div">
             <div class="social-btn">
+              <!-- likes -->
               <div id="like"><i class="fas fa-solid fa-angle-up" style="color: white;"></i></div>
               <div id="likes"><%= comment.likes.length %></div>
               <div id="dislike"><i class="fas fa-solid fa-angle-down" style="color: white;"></i></div>

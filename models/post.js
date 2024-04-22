@@ -7,10 +7,8 @@ const commentSchema = new Schema({
     type: String,
     required: true,
   },
-  likes: { /* [{type: Schema.Types.ObjectId, ref: 'Profile}] */
-    type: Array,
-    default: [],
-  },
+  likes: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
+  dislikes: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
   author: {
     type: Schema.Types.ObjectId,
     ref: 'Profile'
@@ -41,10 +39,8 @@ const postSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Profile'
   },
-  likes: {
-    type: Array,
-    default: [],
-  },
+  likes: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
+  dislikes: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
   createdAt: {
     type: String,
     default: new Date().toLocaleTimeString(),

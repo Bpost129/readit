@@ -172,6 +172,54 @@ function updateComment(req, res) {
   })
 }
 
+function addLike(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    if (!post.likes.includes(req.user.profile._id)) {
+      post.dislikes.remove(req.user.profile._id)
+      post.likes.push(req.user.profile._id)
+    } else {
+      post.likes.remove(req.user.profile._id)
+    }
+    post.save()
+    .then(() => {
+      res.redirect(`/posts`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/posts')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts')
+  })
+}
+
+function addDislike(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    if (!post.dislikes.includes(req.user.profile._id)) {
+      post.likes.remove(req.user.profile._id)
+      post.dislikes.push(req.user.profile._id)
+    } else {
+      post.dislikes.remove(req.user.profile._id)
+    }
+    post.save()
+    .then(() => {
+      res.redirect(`/posts`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/posts')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts')
+  })
+}
+
 export {
   index,
   newPost as new,
@@ -184,5 +232,7 @@ export {
   deleteComment,
   editComment,
   updateComment,
+  addLike,
+  addDislike,
 
 }
