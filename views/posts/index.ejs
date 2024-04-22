@@ -12,10 +12,15 @@
           <p class="author"><%= post.author.name %></p>
           <p class="time" ><%= post.createdAt %></p>
         </div>
-        <div class="content-div">
-          <a href="/posts/<%= post._id %>"><%= post.title %></a>
-          <p><%= post.text %></p>
-        </div>
+        <a href="/posts/<%= post._id %>">
+          <div class="content-div">
+            <div><%= post.title %></div>
+            <% if (post.imageUrl) { %>
+            <img id="post-image" src="<%= post.imageUrl %>" alt="custom image">
+            <% } %>
+            <p><%= post.text %></p>
+          </div>
+        </a>
         <div class="social-div">
           <div class="social-btn">
             <div id="like"><i class="fas fa-solid fa-angle-up" style="color: white;"></i></div>

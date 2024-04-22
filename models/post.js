@@ -7,7 +7,7 @@ const commentSchema = new Schema({
     type: String,
     required: true,
   },
-  likes: {
+  likes: { /* [{type: Schema.Types.ObjectId, ref: 'Profile}] */
     type: Array,
     default: [],
   },
@@ -33,6 +33,9 @@ const postSchema = new Schema({
   text: {
     type: String,
     required: true,
+  },
+  imageUrl: {
+    type: String,
   },
   author: {
     type: Schema.Types.ObjectId,

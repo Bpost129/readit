@@ -12,7 +12,7 @@ button {
   font-size: 16px;
 }
 
-#title-input {
+#title-input, #image-input {
   margin: 8px;
   width: 550px;
   height: 30px;

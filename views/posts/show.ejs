@@ -30,6 +30,9 @@
     </div>
     <div class="content-div">
       <p id="title"><%= post.title %></p>
+      <% if (post.imageUrl) { %>
+        <img id="post-image" src="<%= post.imageUrl %>" alt="custom image">
+      <% } %>
       <p><%= post.text %></p>
     </div>
     <div class="social-div">

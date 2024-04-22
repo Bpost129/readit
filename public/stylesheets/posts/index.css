@@ -1,12 +1,20 @@
 .post-div {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 670px;
   border-bottom: 1px solid rgb(85, 85, 85);
-  padding: 5px 0;
+  border-
+  padding: 5px 20px;
+  /* margin: 0 10px; */
   /* border-bottom: 1px solid grey; */
-  /* margin-bottom: 12px; */
+  margin-top: 6px;
+  border-radius: 12px;
 }
+
+.post-div:hover {
+  background-color: rgb(45, 45, 45);
+}
+
 .avatar {
   height: 32px;
   width: 32px;
@@ -24,15 +32,29 @@
   padding-top: 5px;
 }
 
-/* .content-div {
-  margin-left: 8px;
+.content-div {
+  display: flex;
+  flex-direction: column;
+}
+
+#post-image {
+  object-fit:cover;
+  max-width: 650px;
+  max-height: 300px;
+  margin-top: 10px;
+  background-color: rgb(45, 45, 45);
+  border-radius: 12px;
+}
+
+/* .content-div:hover {
+  
 } */
 
-.content-div > a {
+.content-div > div {
   font-size: 22px;
 }
 
-.content-div > a:hover {
+.content-div > div:hover {
   font-weight: 590;
 }
 

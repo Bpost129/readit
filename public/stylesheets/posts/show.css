@@ -1,11 +1,11 @@
 .post-div {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 650px;
   min-height: 179px;
   /* border-bottom: 1px solid rgb(85, 85, 85); */
   padding-bottom: 8px;
-  /* margin-bottom: 12px; */
+  margin-top: 4px;
 }
 
 .comment-div {
@@ -193,4 +193,12 @@
   background: none;
   border: 1px solid rgb(85, 85, 85);
   color: white;
+}
+
+#post-image {
+  object-fit: scale-down;
+  max-width: 650px;
+  margin-top: 10px;
+  background-color: rgb(45, 45, 45);
+  /* border-radius: 5px; */
 }
