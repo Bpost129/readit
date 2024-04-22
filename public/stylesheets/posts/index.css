@@ -11,7 +11,7 @@
 }
 
 .post-div:hover {
-  background-color: rgb(45, 45, 45);
+  background-color: rgb(45, 45, 45, .7);
 }
 
 .avatar {
