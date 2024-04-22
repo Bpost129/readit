@@ -126,6 +126,52 @@ function deleteComment(req, res) {
   })
 }
 
+function editComment(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    let comment = post.comments.find(comm => {
+      return comm._id.equals(req.params.commentId)
+    })
+    comment.isEditing = !comment.isEditing
+    post.save()
+    .then(() => {
+      res.redirect(`/posts/${post._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/posts')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts')
+  })
+}
+
+function updateComment(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    let comment = post.comments.find(comm => {
+      return comm._id.equals(req.params.commentId)
+    })
+    comment.text = req.body.text
+    comment.isEditing = !comment.isEditing
+    req.body.createdAt = new Date().toLocaleTimeString()
+    post.save()
+    .then(() => {
+      res.redirect(`/posts/${post._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/posts')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts')
+  })
+}
+
 export {
   index,
   newPost as new,
@@ -136,5 +182,7 @@ export {
   deletePost as delete,
   addComment,
   deleteComment,
+  editComment,
+  updateComment,
 
 }

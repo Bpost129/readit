@@ -19,6 +19,10 @@ const commentSchema = new Schema({
     type: String,
     default: new Date().toLocaleTimeString(),
   },
+  isEditing: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const postSchema = new Schema({

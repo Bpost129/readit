@@ -12,6 +12,8 @@ router.get('/:postId', postsCtrl.show)
 
 router.get('/:postId/edit', isLoggedIn, postsCtrl.edit)
 
+router.get('/:postId/comments/:commentId/edit', isLoggedIn, postsCtrl.editComment)
+
 router.post('/', isLoggedIn, postsCtrl.create)
 
 router.post('/:postId/comments', isLoggedIn, postsCtrl.addComment)
@@ -21,6 +23,8 @@ router.delete('/:postId', isLoggedIn, postsCtrl.delete)
 router.delete('/:postId/comments/:commentId', isLoggedIn, postsCtrl.deleteComment)
 
 router.put('/:postId', isLoggedIn, postsCtrl.update)
+
+router.put('/:postId/comments/:commentId', isLoggedIn, postsCtrl.updateComment)
 
 export {
   router

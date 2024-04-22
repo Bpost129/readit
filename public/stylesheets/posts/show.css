@@ -137,7 +137,11 @@
 
 #comment-form {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+}
+
+#comment-form > :nth-child(2) {
+  margin-top: 6px;
 }
 
 #comment-input {
@@ -165,6 +169,28 @@
   text-align: center;
   border: none;
 }
+
 #comment-form-button:hover {
   background-color: rgb(70, 70, 70);
+}
+
+#edit-comment-form {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+}
+
+#edit-comment-form > :nth-child(2) {
+  margin-top: 6px;
+}
+
+#text-update-input {
+  margin: 4px 8px 8px 0;
+  width: 515px;
+  height: 80px;
+  border-radius: 12px;
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid rgb(85, 85, 85);
+  color: white;
 }
