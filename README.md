@@ -18,9 +18,9 @@ Google Oauth template provided by [GA](https://github.com/SEI-Remote/men-stack-o
 ## Ice-Box
 - [x] "Like" functionality
 - [ ] Display time passed in relation to each post/comment
-- [ ] Add images to posts
+- [x] Add images to posts
 - [ ] Sort feature on main page
-- [ ] Popularity feature
+- [ ] Be able to comment on comments
 - [ ] See posts of a specific user
 
 ### [Trello Board](https://trello.com/b/jpyxGCQH/readit)
