@@ -8,8 +8,7 @@ const commentSchema = new Schema({
     required: true,
   },
   likes: {
-    type: Number,
-    default: 0,
+    type: Array,
   },
   author: {
     type: Schema.Types.ObjectId,
@@ -35,8 +34,7 @@ const postSchema = new Schema({
     ref: 'Profile'
   },
   likes: {
-    type: Number,
-    default: 0,
+    type: Array,
   },
   createdAt: {
     type: String,
