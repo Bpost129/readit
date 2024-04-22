@@ -5,15 +5,24 @@
 <main>
   <h1><%= title %></h1>
 
+  
   <form id="edit-post-form" action="/posts/<%= post._id %>?_method=PUT" method="POST">
     <label for="title-input">Title:</label>
     <input type="text" name="title" id="title-input" value="<%= post.title %>">
     <label for="image-input">Image URL:</label>
-    <input type="text" name="imageUrl" id="image-input">
+    <input type="text" name="imageUrl" id="image-input" value="<%= post.imageUrl %>">
     <label for="text-input">Text:</label>
     <textarea name="text" id="text-input" cols="40" rows="6"><%= post.text %></textarea>
+    
+    <div id="btn-div">
+      <a href="/posts/<%= post._id %>">
+        <div class="back-div">
+          <i class="fas fa-solid fa-arrow-left" style="color: white;"></i>
+        </div>
+      </a>
+      <button type="submit">Post It</button>
+    </div>
 
-    <button type="submit">Post It</button>
   </form>
 </main>
 
