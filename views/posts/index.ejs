@@ -19,7 +19,7 @@
         <div class="social-div">
           <div class="social-btn">
             <div id="like"><i class="fas fa-solid fa-angle-up" style="color: white;"></i></div>
-            <div id="likes"><%= post.likes %></div>
+            <div id="likes"><%= post.likes.length %></div>
             <div id="dislike"><i class="fas fa-solid fa-angle-down" style="color: white;"></i></div>
           </div>
           <a href="/posts/<%= post._id %>">
