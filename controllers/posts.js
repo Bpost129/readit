@@ -183,7 +183,7 @@ function addLike(req, res) {
     }
     post.save()
     .then(() => {
-      res.redirect(`/posts`)
+      res.redirect(req.query.redirectTo)
     })
     .catch(err => {
       console.log(err)
@@ -207,7 +207,61 @@ function addDislike(req, res) {
     }
     post.save()
     .then(() => {
-      res.redirect(`/posts`)
+      res.redirect(req.query.redirectTo)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/posts')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts')
+  })
+}
+
+function addLikeToComment(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    let comment = post.comments.find(comm => {
+      return comm._id.equals(req.params.commentId)
+    })
+    if (!comment.likes.includes(req.user.profile._id)) {
+      comment.dislikes.remove(req.user.profile._id)
+      comment.likes.push(req.user.profile._id)
+    } else {
+      comment.likes.remove(req.user.profile._id)
+    }
+    post.save()
+    .then(() => {
+      res.redirect(`/posts/${post._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/posts')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts')
+  })
+}
+
+function addDislikeToComment(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    let comment = post.comments.find(comm => {
+      return comm._id.equals(req.params.commentId)
+    })
+    if (!comment.dislikes.includes(req.user.profile._id)) {
+      comment.likes.remove(req.user.profile._id)
+      comment.dislikes.push(req.user.profile._id)
+    } else {
+      comment.dislikes.remove(req.user.profile._id)
+    }
+    post.save()
+    .then(() => {
+      res.redirect(`/posts/${post._id}`)
     })
     .catch(err => {
       console.log(err)
@@ -234,5 +288,7 @@ export {
   updateComment,
   addLike,
   addDislike,
-
+  addLikeToComment,
+  addDislikeToComment,
+  
 }

@@ -18,6 +18,10 @@ router.get('/:postId/dislike', isLoggedIn, postsCtrl.addDislike)
 
 router.get('/:postId/comments/:commentId/edit', isLoggedIn, postsCtrl.editComment)
 
+router.get('/:postId/comments/:commentId/like', isLoggedIn, postsCtrl.addLikeToComment)
+
+router.get('/:postId/comments/:commentId/dislike', isLoggedIn, postsCtrl.addDislikeToComment)
+
 router.post('/', isLoggedIn, postsCtrl.create)
 
 router.post('/:postId/comments', isLoggedIn, postsCtrl.addComment)
