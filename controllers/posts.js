@@ -4,6 +4,14 @@ function index(req, res) {
   Post.find({})
   .populate('author')
   .then(posts => {
+    // console.log(req.query.sort)
+    // if (req.query.sort === 'Popular') {
+    //   posts.sort((a, b) => {
+    //     (b.likes.length - b.dislikes.length) - (a.likes.length - a.dislikes.length)
+    //   })
+    // } else {
+    //   posts.reverse()
+    // }
     res.render('posts/index', {
       posts,
       title: 'Readit'
@@ -90,7 +98,7 @@ function addComment(req, res) {
   Post.findById(req.params.postId)
   .then(post => {
     req.body.author = req.user.profile._id
-    req.body.createdAt = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit"})
+    req.body.createdAt = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", })
     post.comments.push(req.body)
     post.save()
     .then(() => {
@@ -274,6 +282,28 @@ function addDislikeToComment(req, res) {
   })
 }
 
+// function sort(req, res) {
+//   Post.find({})
+//   .populate('author')
+//   .then(posts => {
+//     if (req.query.sort.eqauls('Popular')) {
+//       posts.sort((a, b) => {
+//         (b.likes.length - b.dislikes.length) - (a.likes.length - a.dislikes.length)
+//       })
+//     } else {
+//       posts.reverse()
+//     }
+//     res.render('posts/index', {
+//       posts,
+//       title: 'Readit'
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/')
+//   })
+// }
+
 export {
   index,
   newPost as new,
@@ -290,5 +320,6 @@ export {
   addDislike,
   addLikeToComment,
   addDislikeToComment,
+  // sort,
 
 }

@@ -6,10 +6,14 @@
 <main>
   <div>
     <% if (posts.length) { %>
-      <select name="sort" id="sort-select">
-        <option value="Recent" selected>Recent</option>
-        <option value="Popular">Popular</option>
-      </select>
+      <!-- <select name="sort" id="sort-select">
+        <a href="/posts/?sort=recent">
+          <option value="Recent" selected>Recent</option>
+        </a>
+        <a href="/posts/?sort=popular">
+          <option value="Popular">Popular</option>
+        </a>
+      </select> -->
       <%# const sortSelect = document.getElementById('sort-select') %>
       <% posts.reverse() %>
       

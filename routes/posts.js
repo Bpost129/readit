@@ -6,6 +6,8 @@ const router = Router()
 
 router.get('/', postsCtrl.index)
 
+// router.get('/', postsCtrl.sort)
+
 router.get('/new', isLoggedIn, postsCtrl.new)
 
 router.get('/:postId', postsCtrl.show)
