@@ -154,7 +154,15 @@
 
 .comment-div {
   margin-bottom: 8px;
+  margin-left: auto;
+  width: 620px;
 }
+
+/* .comment-show {
+  
+  margin-right: 0;
+  width: 600px;
+} */
 
 #comment-form {
   display: flex;
@@ -167,7 +175,7 @@
 
 #comment-input {
   margin: 8px;
-  width: 550px;
+  width: 605px;
   height: 30px;
   border-radius: 25px;
   padding: 6px 12px;
@@ -207,7 +215,7 @@
 
 #text-update-input {
   margin: 4px 8px 8px 0;
-  width: 515px;
+  width: 550px;
   height: 80px;
   border-radius: 12px;
   padding: 6px 12px;
