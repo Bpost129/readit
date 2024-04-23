@@ -33,3 +33,20 @@ button {
   border: 1px solid rgb(85, 85, 85);
   color: white;
 }
+
+#btn-div {
+  display: flex;
+  margin-left: 8px;
+}
+
+.back-div {
+  background-color: rgb(53, 53, 53);
+  margin-top: 8px;
+  padding: 5px 8px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.back-div:hover {
+  background-color: rgb(70, 70, 70);
+}

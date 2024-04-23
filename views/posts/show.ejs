@@ -14,7 +14,9 @@
         </a>
         <img class="avatar" src="<%= post.author.avatar %>" alt="avatar">
         <p class="author" ><%= post.author.name %></p>
-        <p class="time" ><%= post.createdAt %></p>
+        <% let current = new Date().getMilliseconds() %>
+        <% let time = current - post.createdAt %>
+        <p class="time" ><%= Math.floor((time/1000)) %> seconds</p>
       </div>
       <% if (post.author.equals(user?.profile._id)) { %>
         <div class="author-section-2">

@@ -10,6 +10,24 @@
   border-radius: 12px;
 }
 
+#sort-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0 0 5px;
+  padding: 2px 5px;
+  height: 25px;
+  width: 80px;
+  border-radius: 25px;
+  border: none;
+  color:white;
+  background-color: rgb(53, 53, 53);
+}
+
+#sort-select:active {
+  border: none;
+}
+
 .post-div:hover {
   background-color: rgb(45, 45, 45, .7);
 }
