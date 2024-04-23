@@ -59,6 +59,10 @@
   margin-top: 5px;
 }
 
+.content-div > p {
+  margin: 10px 0;
+}
+
 .comment-content-div {
   /* margin-top: 5px; */
   padding-top: 0;
