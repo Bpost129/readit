@@ -107,6 +107,7 @@
   border-radius: 25px;
   color:white;
   background-color: rgb(53, 53, 53);
+  /* background-color: rgba(255, 0, 0, .7); */
 }
 
 .social-btn > * {
@@ -127,12 +128,32 @@
   border-radius: 50%;
 }
 
+.red {
+  background-color: rgba(255, 0, 0, .7);
+}
+
+.green {
+  background-color: rgba(50, 205, 50, .7);
+}
+
+.red:hover {
+  background-color: rgba(255, 0, 0, .7);
+}
+
+.green:hover {
+  background-color: rgba(50, 205, 50, .7);
+}
+
 #dislike:hover {
   background-color: rgba(255, 0, 0, .7);
 }
 
 #like:hover {
   background-color: rgba(50, 205, 50, .7);
+}
+
+.comment-div {
+  margin-bottom: 8px;
 }
 
 #comment-form {

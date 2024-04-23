@@ -24,6 +24,7 @@ function newPost(req, res) {
 function create(req, res) {
   req.body.author = req.user.profile._id
   req.body.createdAt = new Date().toLocaleTimeString()
+  if (!req.body.text && req.body.imageUrl && req.body.title)
   Post.create(req.body)
   .then(post => {
     res.redirect('/posts')
@@ -290,5 +291,5 @@ export {
   addDislike,
   addLikeToComment,
   addDislikeToComment,
-  
+
 }
