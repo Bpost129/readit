@@ -1,5 +1,6 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/posts/index.css">
+<script defer src="/js/sort-helper.js"></script>
 <%- include('../partials/nav') %>
 
 <main>
@@ -9,7 +10,7 @@
       <option value="Popular">Popular</option>
     </select>
     <% posts.reverse() %>
-    
+    <%# sort(posts) %>
     <% posts.forEach(post => { %>
       <div id="placeholder"></div>
       <div class="post-div">
