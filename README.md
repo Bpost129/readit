@@ -21,6 +21,6 @@ Google Oauth template provided by [GA](https://github.com/SEI-Remote/men-stack-o
 - [x] Add images to posts
 - [ ] Sort feature on main page
 - [ ] Be able to comment on comments
-- [ ] See posts of a specific user
+- [ ] See posts of a specific user (favorites sidebar)
 
 ### [Trello Board](https://trello.com/b/jpyxGCQH/readit)
