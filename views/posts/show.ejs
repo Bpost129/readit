@@ -57,55 +57,58 @@
       </form>
     </div>
     <div class="comment-show">
-      <% post.comments.reverse() %>
-      <%# post.comments.sort(a,b) => a.likes - b.likes %>
-      <% post.comments.forEach(comment => { %>
-        <div class="comment-div">
-          <div class="author-div">
-            <div class="author-section-1"> 
-              <img class="avatar" src="<%= comment.author.avatar %>" alt="avatar">
-              <p class="author" ><%= comment.author.name %></p>
-              <p class="time" ><%= comment.createdAt %></p>
-            </div>
-            <% if (comment.author.equals(user?.profile._id)) { %>
-              <div class="author-section-2">
-                <a href="/posts/<%= post._id %>/comments/<%= comment._id %>/edit">
-                  <button class="post-show-btn">
-                    <i class="fas fa-solid fa-pen" style="color:white;"></i>
-                  </button>
-                </a>
-                <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                  <button class="post-show-btn" type="submit"><i class="fas fa-solid fa-trash"></i></button>
-                </form>
+      <% if (post.comments.length > 0) { %>
+        <% post.comments.reverse() %>
+        <% post.comments.forEach(comment => { %>
+          <div class="comment-div">
+            <div class="author-div">
+              <div class="author-section-1"> 
+                <img class="avatar" src="<%= comment.author.avatar %>" alt="avatar">
+                <p class="author" ><%= comment.author.name %></p>
+                <p class="time" ><%= comment.createdAt %></p>
               </div>
-            <% } %>
-          </div>
-          <div class="comment-content-div">
-            <% if (comment.isEditing) { %>
-              <form id="edit-comment-form" action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
-                <textarea name="text" id="text-update-input" cols="40" rows="6"><%= comment.text %></textarea>
-                <button id="comment-form-button" type="submit">
-                  <i class=" fas fa-solid fa-paper-plane" style="color: white;"></i>
-                </button>
-              </form>
-            <% } else {%>
-              <p><%= comment.text %></p>
-            <% } %>
-          </div>
-          <div class="comment-social-div">
-            <div class="social-btn <%= comment.likes.includes(user?.profile._id) ? 'green' : '' %> <%= comment.dislikes.includes(user?.profile._id) ? 'red' : '' %>">
-              <!-- likes -->
-              <a href="/posts/<%= post._id %>/comments/<%= comment._id %>/like?redirectTo=/posts/<%= post._id %>" id="like"><i class="fas fa-solid fa-angle-up" style="color: white;"></i></a>
-              <div id="likes"><%= comment.likes.length - comment.dislikes.length %></div>
-              <a href="/posts/<%= post._id %>/comments/<%= comment._id %>/dislike?redirectTo=/posts/<%= post._id %>" id="dislike"><i class="fas fa-solid fa-angle-down" style="color: white;"></i></a>
+              <% if (comment.author.equals(user?.profile._id)) { %>
+                <div class="author-section-2">
+                  <a href="/posts/<%= post._id %>/comments/<%= comment._id %>/edit">
+                    <button class="post-show-btn">
+                      <i class="fas fa-solid fa-pen" style="color:white;"></i>
+                    </button>
+                  </a>
+                  <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                    <button class="post-show-btn" type="submit"><i class="fas fa-solid fa-trash"></i></button>
+                  </form>
+                </div>
+              <% } %>
             </div>
-            <!-- <div class="social-btn">
-              <div id="num-comments"><%# comment.comments.length %></div>
-              <div><i class="fas fa-solid fa-comment" style="color: white;"></i></div>
-            </div> -->
+            <div class="comment-content-div">
+              <% if (comment.isEditing) { %>
+                <form id="edit-comment-form" action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                  <textarea name="text" id="text-update-input" cols="40" rows="6"><%= comment.text %></textarea>
+                  <button id="comment-form-button" type="submit">
+                    <i class=" fas fa-solid fa-paper-plane" style="color: white;"></i>
+                  </button>
+                </form>
+              <% } else {%>
+                <p><%= comment.text %></p>
+              <% } %>
+            </div>
+            <div class="comment-social-div">
+              <div class="social-btn <%= comment.likes.includes(user?.profile._id) ? 'green' : '' %> <%= comment.dislikes.includes(user?.profile._id) ? 'red' : '' %>">
+                <!-- likes -->
+                <a href="/posts/<%= post._id %>/comments/<%= comment._id %>/like?redirectTo=/posts/<%= post._id %>" id="like"><i class="fas fa-solid fa-angle-up" style="color: white;"></i></a>
+                <div id="likes"><%= comment.likes.length - comment.dislikes.length %></div>
+                <a href="/posts/<%= post._id %>/comments/<%= comment._id %>/dislike?redirectTo=/posts/<%= post._id %>" id="dislike"><i class="fas fa-solid fa-angle-down" style="color: white;"></i></a>
+              </div>
+              <!-- <div class="social-btn">
+                <div id="num-comments"><%# comment.comments.length %></div>
+                <div><i class="fas fa-solid fa-comment" style="color: white;"></i></div>
+              </div> -->
+            </div>
           </div>
-        </div>
-      <% }) %>
+        <% }) %>
+      <% } else { %>
+        <h3 id="no-comments">No comments yet</h3>
+      <% } %>
     </div>
   </div>
 </main>

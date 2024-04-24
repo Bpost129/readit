@@ -237,3 +237,8 @@
   background-color: rgb(45, 45, 45);
   border-radius: 12px;
 }
+
+#no-comments {
+  text-align: center;
+  font-weight: 600;
+}
