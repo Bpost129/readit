@@ -1,28 +1,24 @@
 import { Post } from "../models/post.js"
 
 function index(req, res) {
+  if (!req.query.sort) req.query.sort = 'recent'
   Post.find({})
   .populate('author')
   .then(posts => {
-    console.log(req.query.sort)
     if (req.query.sort === ('popular')) {
-      console.log(posts)
+      posts.reverse()
       posts.sort((a, b) => {
         return (b.likes.length - b.dislikes.length) - (a.likes.length - a.dislikes.length)
       })
-      console.log("----------after---------")
-      console.log(posts)
     } else {
-      // console.log(posts)
       posts.reverse()
-      // console.log("----------after---------")
-      // console.log(posts)
     }
-    if (!req.query.sort) posts.reverse()
+    // if (!req.query.sort) posts.reverse()
 
     res.render('posts/index', {
       posts,
-      title: 'Readit'
+      title: 'Readit',
+      sortType: req.query.sort,
     })
   })
   .catch(err => {
@@ -199,7 +195,11 @@ function addLike(req, res) {
     }
     post.save()
     .then(() => {
-      res.redirect(req.query.redirectTo)
+      if (req.query.redirectTo === '/posts') {
+        res.redirect(`${req.query.redirectTo}/?sort=${req.query.sort}`)
+      } else {
+        res.redirect(req.query.redirectTo)
+      }
     })
     .catch(err => {
       console.log(err)
@@ -223,7 +223,11 @@ function addDislike(req, res) {
     }
     post.save()
     .then(() => {
-      res.redirect(req.query.redirectTo)
+      if (req.query.redirectTo === '/posts') {
+        res.redirect(`${req.query.redirectTo}/?sort=${req.query.sort}`)
+      } else {
+        res.redirect(req.query.redirectTo)
+      }
     })
     .catch(err => {
       console.log(err)
