@@ -4,14 +4,22 @@ function index(req, res) {
   Post.find({})
   .populate('author')
   .then(posts => {
-    // console.log(req.query.sort)
-    // if (req.query.sort === 'Popular') {
-    //   posts.sort((a, b) => {
-    //     (b.likes.length - b.dislikes.length) - (a.likes.length - a.dislikes.length)
-    //   })
-    // } else {
-    //   posts.reverse()
-    // }
+    console.log(req.query.sort)
+    if (req.query.sort === ('popular')) {
+      console.log(posts)
+      posts.sort((a, b) => {
+        return (b.likes.length - b.dislikes.length) - (a.likes.length - a.dislikes.length)
+      })
+      console.log("----------after---------")
+      console.log(posts)
+    } else {
+      // console.log(posts)
+      posts.reverse()
+      // console.log("----------after---------")
+      // console.log(posts)
+    }
+    if (!req.query.sort) posts.reverse()
+
     res.render('posts/index', {
       posts,
       title: 'Readit'
@@ -286,12 +294,19 @@ function addDislikeToComment(req, res) {
 //   Post.find({})
 //   .populate('author')
 //   .then(posts => {
-//     if (req.query.sort.eqauls('Popular')) {
+//     console.log(req.query.sort)
+//     if (req.query.sort === ('popular')) {
+//       console.log(posts)
 //       posts.sort((a, b) => {
-//         (b.likes.length - b.dislikes.length) - (a.likes.length - a.dislikes.length)
+//         return (a.likes - a.dislikes) > (b.likes - b.dislikes)
 //       })
+//       console.log("----------after---------")
+//       console.log(posts)
 //     } else {
+//       // console.log(posts)
 //       posts.reverse()
+//       // console.log("----------after---------")
+//       // console.log(posts)
 //     }
 //     res.render('posts/index', {
 //       posts,

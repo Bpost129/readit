@@ -1,8 +1,14 @@
-// const sortSelect = document.getElementById('sort-select')
+const sortForm = document.getElementById('sort-form')
 // const posts = document.
 // // const likes = document.getElementById('likes')
 
-// sortSelect.addEventListener('change', sort)
+sortForm.addEventListener('change', (e) => {
+  
+  
+  sortForm.submit()
+  
+})
+
 
 // function sort(arr) {
   

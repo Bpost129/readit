@@ -6,16 +6,19 @@
 <main>
   <div>
     <% if (posts.length) { %>
-      <!-- <select name="sort" id="sort-select">
-        <a href="/posts/?sort=recent">
-          <option value="Recent" selected>Recent</option>
-        </a>
-        <a href="/posts/?sort=popular">
-          <option value="Popular">Popular</option>
-        </a>
-      </select> -->
+      <form id="sort-form" action="/posts/" method="GET">
+        <select name="sort" id="sort-select">
+          <option value="" disabled selected>Sort</option>
+          <a href="/posts/?sort=recent">
+            <option value="recent">Recent</option>
+          </a>
+          <a href="/posts/?sort=popular">
+            <option value="popular">Popular</option>
+          </a>
+        </select>
+      </form>
       <%# const sortSelect = document.getElementById('sort-select') %>
-      <% posts.reverse() %>
+      <%# posts.reverse() %>
       
       <% posts.forEach(post => { %>
         <div id="placeholder"></div>
