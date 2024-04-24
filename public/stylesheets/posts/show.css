@@ -193,6 +193,7 @@
   height: 80px
 }
 
+
 #comment-form-button {
   height: 32px;
   width: 32px;
@@ -240,5 +241,5 @@
 
 #no-comments {
   text-align: center;
-  font-weight: 600;
+  font-weight: 575;
 }

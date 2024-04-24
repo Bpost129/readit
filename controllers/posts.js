@@ -35,7 +35,7 @@ function newPost(req, res) {
 
 function create(req, res) {
   req.body.author = req.user.profile._id
-  req.body.createdAt = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit"})
+  req.body.createdAt = new Date().now()
   Post.create(req.body)
   .then(post => {
     res.redirect('/posts')
@@ -102,7 +102,7 @@ function addComment(req, res) {
   Post.findById(req.params.postId)
   .then(post => {
     req.body.author = req.user.profile._id
-    req.body.createdAt = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", })
+    req.body.createdAt = new Date().toISOString()
     post.comments.push(req.body)
     post.save()
     .then(() => {
@@ -168,7 +168,7 @@ function updateComment(req, res) {
     })
     comment.text = req.body.text
     comment.isEditing = !comment.isEditing
-    req.body.createdAt = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit"})
+    req.body.createdAt = new Date().getDate()
     post.save()
     .then(() => {
       res.redirect(`/posts/${post._id}`)
