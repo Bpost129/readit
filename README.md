@@ -19,7 +19,7 @@ Google Oauth template provided by [GA](https://github.com/SEI-Remote/men-stack-o
 - [x] "Like" functionality
 - [ ] Display time passed in relation to each post/comment
 - [x] Add images to posts
-- [ ] Sort feature on main page
+- [x] Sort feature on main page
 - [ ] Be able to comment on comments
 - [ ] See posts of a specific user (favorites sidebar)
 
