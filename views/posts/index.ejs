@@ -25,21 +25,16 @@
           </a>
         </select>
       </form>
-      <%# const sortSelect = document.getElementById('sort-select') %>
-      <%# posts.reverse() %>
-      
+
       <% posts.forEach(post => { %>
         <div id="placeholder"></div>
         <div class="post-div">
           <div class="author-div">
             <img class="avatar" src="<%= post.author.avatar %>" alt="avatar">
             <p class="author"><%= post.author.name %></p>
-            <!-- time -->
-            
-
-            <!-- time -->
             <p class="time" ><%= post.createdAt %></p>
           </div>
+
           <a href="/posts/<%= post._id %>">
             <div class="content-div">
               <div><%= post.title %></div>
@@ -49,9 +44,9 @@
               <p><%= post.text %></p>
             </div>
           </a>
+
           <div class="social-div">
             <div class="social-btn <%= post.likes.includes(user?.profile._id) ? 'green' : '' %> <%= post.dislikes.includes(user?.profile._id) ? 'red' : '' %>">
-              <!-- likes -->
               <a href="/posts/<%= post._id %>/like?redirectTo=/posts&sort=<%= sortType %>" id="like"><i class="fas fa-solid fa-angle-up" style="color: white;"></i></a>
               <div id="likes"><%= post.likes.length - post.dislikes.length %></div>
               <a href="/posts/<%= post._id %>/dislike?redirectTo=/posts&sort=<%= sortType %>" id="dislike"><i class="fas fa-solid fa-angle-down" style="color: white;"></i></a>
@@ -62,7 +57,7 @@
                 <div><i class="fas fa-solid fa-comment" style="color: white;"></i></div>
               </div>
             </a>
-          </div>
+          </div> 
         </div>
       <% }) %>
     

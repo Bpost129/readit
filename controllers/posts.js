@@ -13,8 +13,6 @@ function index(req, res) {
     } else {
       posts.reverse()
     }
-    // if (!req.query.sort) posts.reverse()
-
     res.render('posts/index', {
       posts,
       title: 'Readit',
@@ -294,35 +292,6 @@ function addDislikeToComment(req, res) {
   })
 }
 
-// function sort(req, res) {
-//   Post.find({})
-//   .populate('author')
-//   .then(posts => {
-//     console.log(req.query.sort)
-//     if (req.query.sort === ('popular')) {
-//       console.log(posts)
-//       posts.sort((a, b) => {
-//         return (a.likes - a.dislikes) > (b.likes - b.dislikes)
-//       })
-//       console.log("----------after---------")
-//       console.log(posts)
-//     } else {
-//       // console.log(posts)
-//       posts.reverse()
-//       // console.log("----------after---------")
-//       // console.log(posts)
-//     }
-//     res.render('posts/index', {
-//       posts,
-//       title: 'Readit'
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/')
-//   })
-// }
-
 export {
   index,
   newPost as new,
@@ -339,6 +308,4 @@ export {
   addDislike,
   addLikeToComment,
   addDislikeToComment,
-  // sort,
-
 }
