@@ -1,11 +1,16 @@
+
+
 const clock = document.querySelectorAll('.time')
 
-function calculateTime(created) {
-  let time = Date.parse(created);
-  let now = Date.now();
-  let secondsPast = (now - time) / 1000;
-  let suffix = 'ago';
 
+
+
+if (parseInt(clock.textContent) > 60) {
+  let time = clock.textContent
+  let now = Date.now()
+  let secondsPast = (now - time) / 1000
+  let suffix = 'ago'
+  
   let intervals = {
     year: 31536000,
     month: 2592000,
@@ -15,13 +20,19 @@ function calculateTime(created) {
     minute: 60,
     second: 1
   };
-
+  
   for (let i in intervals) {
-    let interval = intervals[i];
+    let interval = intervals[i]
       if (secondsPast >= interval) {
-        let count = Math.floor(secondsPast / interval);
-        return `${count} ${i} ${count > 1 ? 's' : ''} ${suffix}`;
+        let count = Math.floor(secondsPast / interval)
+        clock.textContent(`${count} ${i} ${count > 1 ? 's' : ''} ${suffix}`)
       }
   }
 }
+
+
+
+
+// function calculateTime(created) {
+// }
 

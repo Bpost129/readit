@@ -65,6 +65,7 @@
               <div class="author-section-1"> 
                 <img class="avatar" src="<%= comment.author.avatar %>" alt="avatar">
                 <p class="author" ><%= comment.author.name %></p>
+                <!-- time -->
                 <p class="time" ><%= comment.createdAt %></p>
               </div>
               <% if (comment.author.equals(user?.profile._id)) { %>
