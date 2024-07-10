@@ -8,7 +8,7 @@
 
 **Readit** is a community of communities, a place for anyone to discover and discuss an endless amount of topics. Breaking news, TV shows, obscure sports, the occasional flying mongoose, and so many more exciting things await you. Stop by to interact, make friends, and share laughs on Readit.
 
-### [Discover Readit](https://readit-bp.fly.dev/)
+# [Discover Readit](https://readit-bp.fly.dev/)
 
 ## Credits
 
