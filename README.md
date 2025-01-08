@@ -21,7 +21,7 @@ Google Oauth template provided by [GA](https://github.com/SEI-Remote/men-stack-o
 - [ ] Display time passed in relation to each post/comment
 - [x] Add images to posts
 - [x] Sort feature on main page
-- [ ] Be able to comment on comments
+- [ ] Be able to create comment threads
 - [ ] See posts of a specific user (favorites sidebar)
 
 ### [Trello Board](https://trello.com/b/jpyxGCQH/readit)
